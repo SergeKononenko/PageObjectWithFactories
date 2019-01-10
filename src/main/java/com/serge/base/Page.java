@@ -14,7 +14,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
+import com.serge.pages.actions.SignInWindow;
 import com.serge.pages.actions.TopNavigation;
+import com.serge.pages.locators.SignInWindowLocators;
 import com.serge.utilities.ExcelReader;
 import com.serge.utilities.ExtentManager;
 
@@ -37,6 +39,7 @@ public class Page {
 	public static ExtentTest test;
 	public static String browser;
 	public static TopNavigation topNav;
+	public static SignInWindow signInWindow;
 
 	public static void initConfiguration() {
 
@@ -76,8 +79,9 @@ public class Page {
 		driver.get(Consatnts.testSiteURL);
 		driver.manage().window().maximize();
 		topNav = new TopNavigation(driver);
-//		 driver.manage().timeouts().implicitlyWait(Consatnts.implicitwait,
-//		 TimeUnit.SECONDS); 
+		signInWindow = new SignInWindow(driver);
+		 driver.manage().timeouts().implicitlyWait(Consatnts.implicitwait,
+		 TimeUnit.SECONDS); 
 		// wait = new WebDriverWait(driver, 0);
 		
 		// topNav = new TopNavigation(driver);
