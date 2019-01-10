@@ -33,17 +33,21 @@ public class HomePage extends Page {
 	}
 
 	public void bookFlight(String from, String to, String departDate,
-			String returnDate) throws InterruptedException {
+			String returnDate) {
 
 		home.fromCity.sendKeys(from);
 		home.toCity.sendKeys(to);
 		home.departDate.sendKeys(departDate);
 		
 		home.returnDate.click();
-		Thread.sleep(3000);
-		home.returnDate.clear();
-		home.returnDate.sendKeys(returnDate);
+		//home.returnDate.clear();
+		//home.returnDate.sendKeys(returnDate);
 		home.searchButton.click();
 	}
 
+	public int findTabCount() {
+
+		return home.tabCount.size();
+				
+	}
 }

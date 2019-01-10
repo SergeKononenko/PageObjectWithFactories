@@ -1,11 +1,14 @@
-package com.serge.rough;
+package com.serge.testcases;
+
+import org.testng.annotations.Test;
 
 import com.serge.base.Page;
 import com.serge.pages.actions.SignInWindow;
 
 public class SignInTest {
 
-	public static void main(String[] args) {
+	@Test
+	public void signInTest() {
 		
 		Page.initConfiguration();
 		SignInWindow signIn = Page.topNav.gotoSignin();

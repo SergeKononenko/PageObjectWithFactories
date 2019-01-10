@@ -5,12 +5,20 @@
 	<listeners>
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
-		<listener class-name="com.serge.listeners.CustomListeners" />
+		<listener class-name="com.serge.errorcollectors.TestListenerAdapter" />
+		
 	</listeners>
 
-	<test thread-count="5" name="loginAsManager">
+	<test thread-count="5" name="SignIn Test">
 		<classes>
-			<class name="com.serge.testCases.LoginTest" />
+			<class name="com.serge.testcases.SignInTest" />
+
+		</classes>
+	</test> <!-- Test -->
+	
+	<test thread-count="5" name="FlightSearch Test">
+		<classes>
+			<class name="com.serge.testcases.FlightSerachTest" />
 
 		</classes>
 	</test> <!-- Test -->

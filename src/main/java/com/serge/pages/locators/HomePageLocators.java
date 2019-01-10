@@ -1,5 +1,7 @@
 package com.serge.pages.locators;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -24,6 +26,9 @@ public class HomePageLocators {
 	
 	@FindBy(css = "#gcw-flights-form-hp-flight [type*=submit]")
 	public WebElement searchButton;
+	
+	@FindBy(css = "li[class='tab ']")
+	public List<WebElement> tabCount;
 	
 	
 	
